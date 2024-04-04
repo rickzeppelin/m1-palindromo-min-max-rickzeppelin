@@ -38,5 +38,16 @@ function isPalindrome(str){
 }
 
 function arrayMaxMin(arr){
-    /* Seu código aqui */
+    let min = 99999; // muito mais fácil encontrar o menor iniciando com um valor bem grande
+    let max = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    let newArray = [min, max];
+    return newArray;
 }
